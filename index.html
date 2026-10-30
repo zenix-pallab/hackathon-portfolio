@@ -140,15 +140,51 @@ form{display:grid;gap:12px}
 input,textarea{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;outline:0}input:focus,textarea:focus{border-color:var(--gold)}
 #st{font-size:.9rem;min-height:1.4em;color:var(--gold);font-weight:600}
 .notes{position:relative;height:270px}
-.nt{position:absolute;padding:15px 16px;width:150px;color:#3d2410;font:700 1.25rem/1.15 Caveat;box-shadow:0 12px 24px rgba(0,0,0,.3);cursor:grab;touch-action:none;user-select:none}.nt:active{cursor:grabbing}
+.nt{position:absolute;padding:15px 16px;width:150px;color:#3d2410;font:700 1.25rem/1.15 Caveat;box-shadow:0 12px 24px rgba(0,0,0,.3);cursor:default}
 .nt::before{content:"";position:absolute;top:-7px;left:50%;width:13px;height:13px;border-radius:50%;background:var(--wine);box-shadow:0 2px 3px rgba(0,0,0,.3)}
-#cp{position:fixed;inset:0;z-index:400;background:rgba(10,3,5,.6);display:none;align-items:flex-start;justify-content:center;padding-top:14vh}#cp.o{display:flex}
-#cp div{width:min(520px,92vw);background:var(--bg);color:var(--ink);border:1px solid var(--gold);border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5)}
-#cp input{border:0;border-radius:0;border-bottom:1px solid var(--line);padding:18px 20px;font-size:1.05rem;background:var(--bg)}
-#cp ul{list-style:none;padding:8px;max-height:50vh;overflow:auto}#cp li{padding:12px 14px;border-radius:10px;cursor:pointer;display:flex;justify-content:space-between;font-weight:500}#cp li:hover,#cp li.f{background:var(--bg2)}#cp li small{color:var(--gold);font-weight:700}
 footer{text-align:center;padding:30px 20px 40px;font-size:.82rem;color:var(--mute);background:var(--bg);border-top:1px solid var(--line)}
 @media(max-width:700px){.sil{width:58vw;bottom:-6%}.hx{padding-bottom:6vh}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hx h1 i{transform:none}}
+
+body{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}input,textarea{user-select:text;-webkit-user-select:text}
+textarea{resize:none}
+.hero{align-items:center;justify-content:center}
+.hx{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:30px 4vw;z-index:2}
+.hx h1{font-size:clamp(3.8rem,19vw,16rem);line-height:.84}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.38;pointer-events:none}
+.o1{width:46vmax;height:46vmax;background:var(--gold2);left:-12vmax;top:-10vmax;animation:d1 18s ease-in-out infinite alternate}
+.o2{width:40vmax;height:40vmax;background:var(--wine);right:-14vmax;bottom:-12vmax;animation:d2 22s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate(16vmax,12vmax)}}@keyframes d2{to{transform:translate(-12vmax,-8vmax)}}
+.bd{width:104px;height:104px;position:relative}.bd svg{width:100%;height:100%;animation:rot 18s linear infinite}.bd text{font:700 10.5px Inter;letter-spacing:.22em;fill:var(--gold);text-transform:uppercase}.bd b{position:absolute;inset:0;display:grid;place-items:center;font:1.6rem "Archivo Black"}
+@keyframes rot{to{transform:rotate(360deg)}}
+.kk{font:700 .78rem Inter;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);display:flex;gap:14px;align-items:center;margin:16px 0 14px}.kk::before,.kk::after{content:"";width:34px;height:1px;background:var(--gold)}
+.sub2{font:600 clamp(.9rem,2.6vw,1.4rem) Inter;letter-spacing:.22em;text-transform:uppercase;margin-top:20px}
+.th{width:42px;height:42px;padding:0}.th svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.th .sun{display:none}[data-theme="dark"] .th .sun{display:block}[data-theme="dark"] .th .moon{display:none}
+.swl{min-height:100svh;height:auto;display:grid;place-items:center;padding:110px 0 100px}
+.fr{position:relative;left:auto;top:auto;transform:none;aspect-ratio:auto;width:min(1040px,90vw);z-index:2;padding:clamp(26px,6vw,64px);color:#f6ecd8}
+.bm{opacity:.4}
+.fc{position:relative;z-index:2;text-align:left}
+.fc .k{color:#f0b429}.fc h2{color:#fff;font-size:clamp(2rem,6.4vw,4.6rem);margin:10px 0 16px}.fc h2 em{color:#ffd36b}
+.fc>p{max-width:560px;color:#d9cdb8;font-size:1.02rem}
+.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:34px 0}
+.pl div{border-top:1px solid rgba(246,236,216,.3);padding-top:14px}.pl b{font:.8rem Inter;color:#f0b429;letter-spacing:.2em}.pl h3{font:1.35rem "Archivo Black";text-transform:uppercase;margin:4px 0;color:#fff}.pl span{font-size:.88rem;color:#cbbfa9}
+.fc .btn{border-color:#fff;color:#fff}.fc .btn.p{background:#fff;color:#000}
+.r2{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:700px){.pl{grid-template-columns:1fr;gap:16px}}
+.gl{-webkit-text-stroke:1.5px color-mix(in srgb,var(--ink) 55%,transparent);color:color-mix(in srgb,var(--ink) 7%,transparent)}
+.hint2{position:absolute;bottom:6vh;left:50%;transform:translateX(-50%);z-index:4;display:flex;gap:10px;align-items:center;padding:10px 18px;border:1px solid var(--line);border-radius:99px;background:var(--card);font:700 .68rem Inter;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;max-width:94vw;box-shadow:var(--sh);transition:opacity .4s}
+.hint2 b{color:var(--gold);font-size:1rem;animation:bn 1.2s ease-in-out infinite}@keyframes bn{50%{transform:translateY(5px)}}
+.prog{position:absolute;left:6vw;right:6vw;bottom:3.4vh;height:3px;background:var(--line);border-radius:3px;z-index:4}.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--wine),var(--gold2));border-radius:3px}
+.sph{perspective:900px}.sph::before{display:none}
+.g3{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d}
+.rg{position:absolute;border:1px dashed color-mix(in srgb,var(--gold) 55%,transparent);border-radius:50%}
+.sph span{box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.ft{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px;padding:30px 20px 40px;font-size:.82rem}.ft i{font-style:normal;color:var(--gold)}
+@media(max-width:600px){.ft{flex-direction:column;align-items:center;gap:2px}.ft i{display:none}}
+.st.rv{opacity:0;transform:translateX(-90px) scale(.9) rotate(-2deg);transition:opacity .9s,transform 1.1s cubic-bezier(.2,1.2,.3,1)}
+.st:nth-child(odd).rv{transform:translateX(90px) scale(.9) rotate(2deg)}
+.st.rv.in{opacity:1;transform:none}
+.st.in::before{animation:pop .8s .25s both cubic-bezier(.2,1.6,.4,1)}@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
 </style>
 </head>
 <body class="ld">
@@ -163,20 +199,21 @@ footer{text-align:center;padding:30px 20px 40px;font-size:.82rem;color:var(--mut
 <div id="ld"><svg viewBox="0 0 400 300" aria-hidden="true"><path pathLength="1" d="M80 160C60 90 140 40 200 70C250 30 340 70 330 140C360 200 290 260 210 245C150 280 60 240 80 160Z"/><text x="200" y="168">PG</text></svg></div>
 <div id="pg"></div>
 <header>
-  <a class="logo" href="#top">PALLAB<b>.</b></a>
+  <a class="logo" href="#top">PALLAB GHOSH<b>.</b></a>
   <nav id="nv"><a href="#about"><span>01</span>About</a><a href="#services"><span>02</span>Services</a><a href="#skills"><span>03</span>Skills</a><a href="#work"><span>04</span>Projects</a><a href="#awards"><span>05</span>Journey</a><a href="#contact"><span>06</span>Contact</a></nav>
-  <div class="hs"><a class="ib so" href="https://www.instagram.com/zenix_pallab" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#ig"/></svg></a><a class="ib so" href="https://x.com/zenix_pallab" target="_blank" rel="noopener" aria-label="X"><svg class="ic"><use href="#xx"/></svg></a><a class="ib so" href="https://github.com/zenix-pallab" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#gh"/></svg></a><button class="ib" id="kb" aria-label="Quick menu">Ctrl K</button><button class="ib" id="tg" aria-label="Toggle theme">◐</button><button class="ib" id="mb" aria-label="Menu">☰</button></div>
+  <div class="hs"><a class="ib so" href="https://www.instagram.com/zenix_pallab" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#ig"/></svg></a><a class="ib so" href="https://x.com/zenix_pallab" target="_blank" rel="noopener" aria-label="X"><svg class="ic"><use href="#xx"/></svg></a><a class="ib so" href="https://github.com/zenix-pallab" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#gh"/></svg></a><button class="ib th" id="tg" aria-label="Switch light or dark theme"><svg class="moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg></button><button class="ib" id="mb" aria-label="Menu">☰</button></div>
 </header>
 
 <main>
 <section class="hero lt" id="top">
+  <div class="orb o1"></div><div class="orb o2"></div>
   <div class="hx">
-    <h1><span><i>Explore my</i></span><span><i>Portfolio</i></span></h1>
-    <svg class="sil" id="sil" viewBox="0 0 400 420" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c2a2e"/><stop offset="1" stop-color="#8d887f"/></linearGradient><filter id="sb"><feGaussianBlur stdDeviation="1.4"/></filter></defs><g fill="url(#sg)" filter="url(#sb)"><ellipse cx="200" cy="120" rx="62" ry="78"/><rect x="170" y="180" width="60" height="70"/><path d="M10 420C20 310 110 268 165 252L235 252C290 268 380 310 390 420Z"/></g></svg>
-  </div>
-  <div class="hb">
-    <div><p><b>Pallab Ghosh</b>, web developer and UI designer. I take ideas from sketch to a polished live product.</p><div class="rl" id="rl"></div></div>
-    <div class="hl">Web design<br>UI / UX<br><b>Development</b><br>Deployment</div>
+    <div class="bd"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cp1" d="M60 60m-48 0a48 48 0 1 1 96 0a48 48 0 1 1-96 0"/></defs><text><textPath href="#cp1">Portfolio • Design • Hackathon 2026 •</textPath></text></svg><b>PG</b></div>
+    <span class="kk">Explore my portfolio</span>
+    <h1><span><i>Pallab</i></span><span><i>Ghosh</i></span></h1>
+    <div class="sub2">Web developer &amp; UI designer</div>
+    <div class="rl" id="rl"></div>
+    <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px"><a class="btn p" href="#work">View my work</a><a class="btn" href="#contact">Get in touch</a></div>
   </div>
 </section>
 
@@ -187,8 +224,14 @@ footer{text-align:center;padding:30px 20px 40px;font-size:.82rem;color:var(--mut
   <div class="row rv" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:34px"><a class="btn p" href="#work">View my work</a><a class="btn" href="Pallab_Ghosh_Resume.pdf" download>Download resume</a></div>
 </div></section>
 
-<section class="swl dk" id="intro"><canvas id="sw"></canvas><div class="fr"><div class="bm"></div></div>
-  <div class="sb"><p><b>Discipline &amp; craft</b>I build digital products where purposeful design meets solid engineering, with attention to motion, structure and detail.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn p" href="#work">Projects</a><a class="btn" href="#services">Services</a></div></div>
+<section class="swl dk" id="intro"><canvas id="sw"></canvas>
+  <div class="fr"><div class="bm"></div><div class="fc">
+    <span class="k">discipline &amp; craft</span>
+    <h2>Purposeful design.<br><em>Solid engineering.</em></h2>
+    <p>I build digital products where design and engineering meet, with close attention to motion, structure and detail.</p>
+    <div class="pl"><div><b>01</b><h3>Design</h3><span>Type, colour and motion shaped before any code.</span></div><div><b>02</b><h3>Build</h3><span>Responsive, fast and easy to maintain.</span></div><div><b>03</b><h3>Deploy</h3><span>Live on Vercel or Netlify, versioned on GitHub.</span></div></div>
+    <div class="r2"><a class="btn p" href="#work">Projects</a><a class="btn" href="#services">Services</a></div>
+  </div></div>
 </section>
 
 <section class="gh dk"><div class="gl" data-d="1">Web developer — UI designer — </div>
@@ -196,16 +239,6 @@ footer{text-align:center;padding:30px 20px 40px;font-size:.82rem;color:var(--mut
   <div class="gl" data-d="-1" style="margin-top:.1em">Creative builder — Problem solver — </div>
   <div class="chips"><span>Portfolio 2026</span><span>Online</span><span>Open to opportunities</span></div>
 </section>
-
-<section class="cvw lt" id="work"><div class="cvs">
-  <div class="cvh"><span class="k">04 · selected projects</span><h2>Projects</h2></div>
-  <div class="tr" id="tr">
-    <div class="cd"><div class="ci"><div class="vs v1">UNISONE</div><div class="pt"><h3>UNISONE · The Sound of Togetherness</h3><p>Plays the same YouTube song in sync on many phones, with a custom player, rooms, host controls and join-by-link.</p><div class="tg"><span>JavaScript</span><span>Firebase</span><span>Cloudflare Worker</span><span>Vercel</span></div><a class="lnk" href="https://unisone.vercel.app" target="_blank" rel="noopener">Open live site →</a></div></div></div>
-    <div class="cd"><div class="ci"><div class="vs v2">PORTFOLIO</div><div class="pt"><h3>Portfolio with an admin panel</h3><p>A site I can edit myself: uploads, cropping, drag-and-drop ordering and a protected login with password plus Telegram OTP.</p><div class="tg"><span>JavaScript</span><span>Cloudflare Worker</span><span>Firebase</span><span>Netlify</span></div><a class="lnk" href="https://zenix-pallab.netlify.app" target="_blank" rel="noopener">Visit portfolio →</a></div></div></div>
-    <div class="cd"><div class="ci"><div class="vs v3">HACKATHON</div><div class="pt"><h3>Portfolio Design Hackathon 2026</h3><p>This very portfolio, designed and built as my entry for the online individual hackathon.</p><div class="tg"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="lnk" href="#top">Back to the start →</a></div></div></div>
-    <div class="cd"><div class="ci"><div class="vs v4">NEXT?</div><div class="pt"><h3>Your idea, next</h3><p>Have something in mind? Let’s design it, build it and put it live.</p><a class="lnk" href="#contact">Start a conversation →</a></div></div></div>
-  </div>
-</div></section>
 
 <section id="services" class="sec lt"><div class="w sv">
   <span class="k" style="display:block;text-align:center">02 · services</span><h2 class="rv">What I <em>do</em></h2>
@@ -224,7 +257,18 @@ footer{text-align:center;padding:30px 20px 40px;font-size:.82rem;color:var(--mut
   <div class="bars rv"><div>UI/UX Design<i style="--w:90%"></i></div><div>Frontend: HTML, CSS, JavaScript<i style="--w:88%"></i></div><div>Backend &amp; Cloud<i style="--w:78%"></i></div><div>AI-assisted building<i style="--w:92%"></i></div></div>
 </div></section>
 
-<section id="awards" class="sec lt"><div class="w">
+<section class="cvw lt" id="work"><div class="cvs">
+  <div class="hint2" id="h2t"><span>Scroll down to slide through projects</span><b>↓</b></div><div class="prog"><i id="cpg"></i></div>
+  <div class="cvh"><span class="k">04 · selected projects</span><h2>Projects</h2></div>
+  <div class="tr" id="tr">
+    <div class="cd"><div class="ci"><div class="vs v1">UNISONE</div><div class="pt"><h3>UNISONE · The Sound of Togetherness</h3><p>Plays the same YouTube song in sync on many phones, with a custom player, rooms, host controls and join-by-link.</p><div class="tg"><span>JavaScript</span><span>Firebase</span><span>Cloudflare Worker</span><span>Vercel</span></div><a class="lnk" href="https://unisone.vercel.app" target="_blank" rel="noopener">Open live site →</a></div></div></div>
+    <div class="cd"><div class="ci"><div class="vs v2">PORTFOLIO</div><div class="pt"><h3>Portfolio with an admin panel</h3><p>A site I can edit myself: uploads, cropping, drag-and-drop ordering and a protected login with password plus Telegram OTP.</p><div class="tg"><span>JavaScript</span><span>Cloudflare Worker</span><span>Firebase</span><span>Netlify</span></div><a class="lnk" href="https://zenix-pallab.netlify.app" target="_blank" rel="noopener">Visit portfolio →</a></div></div></div>
+    <div class="cd"><div class="ci"><div class="vs v3">HACKATHON</div><div class="pt"><h3>Portfolio Design Hackathon 2026</h3><p>This very portfolio, designed and built as my entry for the online individual hackathon.</p><div class="tg"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="lnk" href="#top">Back to the start →</a></div></div></div>
+    <div class="cd"><div class="ci"><div class="vs v4">NEXT?</div><div class="pt"><h3>Your idea, next</h3><p>Have something in mind? Let’s design it, build it and put it live.</p><a class="lnk" href="#contact">Start a conversation →</a></div></div></div>
+  </div>
+</div></section>
+
+<section id="awards" class="sec dk"><div class="w">
   <span class="k">05 · achievements &amp; certifications</span><h2 class="rv">Golden <em>tickets</em></h2>
   <div class="tkr">
     <div class="tw rv"><div class="tk2 g1"><div class="tm"><small>Admit one · Certificate</small><h3>Digital Productivity</h3><p>Passport to Earning, completion certificate by UNICEF (YuWaah, Generation Unlimited).</p><div class="mt"><span>17 Jun 2026</span><span>Score 100%</span></div></div><div class="ts"><b>№ 0001</b><i class="bc"></i></div></div></div>
@@ -263,9 +307,7 @@ footer{text-align:center;padding:30px 20px 40px;font-size:.82rem;color:var(--mut
   </div>
 </div></section>
 </main>
-<footer class="sec" style="padding:30px 20px 40px">© 2026 Pallab Ghosh · Made for Portfolio Design Hackathon 2026</footer>
-<div id="cp"><div><input id="ci" placeholder="Jump to… (type to search)"><ul id="cl"></ul></div></div>
-
+<footer class="sec ft"><span>© 2026 Pallab Ghosh</span><i>·</i><span>Made for Portfolio Design Hackathon 2026</span></footer>
 <script>
 var $=function(s){return document.querySelector(s)},$$=function(s){return[].slice.call(document.querySelectorAll(s))};
 function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
@@ -281,7 +323,6 @@ $$("[data-n]").forEach(function(el){if(el.classList.contains("st"))return;var o=
 // LET'S TALK letters
 (function(){var s=$("#say"),h="";"Let’s".split("").forEach(function(c){h+="<span>"+c+"</span>"});h+="<br>";"talk".split("").forEach(function(c){h+="<span>"+c+"</span>"});s.innerHTML=h})();
 // silhouette parallax
-addEventListener("pointermove",function(e){if(scrollY<innerHeight)$("#sil").style.transform="translateX(calc(-50% + "+((e.clientX/innerWidth-.5)*26)+"px))"});
 // swirl + flashlight
 (function(){var sec=$("#intro"),cv=$("#sw"),g=cv.getContext("2d"),lm=0,px=.5,py=.45;
 function paint(){cv.width=sec.clientWidth;cv.height=sec.clientHeight;g.fillStyle="#0a0407";g.fillRect(0,0,cv.width,cv.height);
@@ -295,21 +336,26 @@ var gl=$$(".gl");
 // curved project band
 var cvw=$("#work"),tr=$("#tr"),cds=$$(".cd");
 function sizeCv(){cvw.style.height=(innerHeight+Math.max(0,tr.scrollWidth-innerWidth))+"px"}
-function cv(){var p=clamp((scrollY-cvw.offsetTop)/Math.max(1,cvw.offsetHeight-innerHeight),0,1);tr.style.transform="translate3d("+(-p*Math.max(0,tr.scrollWidth-innerWidth))+"px,0,0)";
+function cv(){var p=clamp((scrollY-cvw.offsetTop)/Math.max(1,cvw.offsetHeight-innerHeight),0,1);$("#cpg").style.width=(p*100)+"%";$("#h2t").style.opacity=p>.9||p<0?0:1;tr.style.transform="translate3d("+(-p*Math.max(0,tr.scrollWidth-innerWidth))+"px,0,0)";
 cds.forEach(function(c){var r=c.getBoundingClientRect(),d=((r.left+r.width/2)-innerWidth/2)/(innerWidth/2),ad=Math.abs(d),ci2=c.firstChild;ci2.style.transform="rotateY("+(-d*34)+"deg) translateZ("+(-ad*130)+"px) scale("+(1-ad*.07)+")";ci2.style.opacity=clamp(1-ad*.35,.35,1)})}
 addEventListener("resize",function(){sizeCv();cv()});
 // accordion
 $$(".ro").forEach(function(r){var b=r.querySelector("button"),p=r.querySelector("div");function fix(){p.style.maxHeight=r.classList.contains("o")?p.scrollHeight+30+"px":0}fix();b.onclick=function(){$$(".ro").forEach(function(x){if(x!==r){x.classList.remove("o");x.querySelector("div").style.maxHeight=0}});r.classList.toggle("o");fix()}});
-// 3D skill sphere
-var SK=["HTML5","CSS3","JavaScript","UI/UX","Responsive","Animations","Firebase","Cloudflare","Vercel","Netlify","GitHub","AI Tools","Deployment","Design"],sp3=$("#sph"),N=SK.length,pts=[],els=[];
-SK.forEach(function(t,i){var ph=Math.acos(-1+2*(i+.5)/N),th=Math.sqrt(N*Math.PI)*ph,e=document.createElement("span");e.textContent=t;sp3.appendChild(e);els.push(e);pts.push([Math.cos(th)*Math.sin(ph),Math.sin(th)*Math.sin(ph),Math.cos(ph)])});
-var ax=0,ay=0,vx=0,vy=.006,dr=0,lx=0,ly=0,on=true;
-function draw(){var Rr=sp3.clientWidth*.4,cx=sp3.clientWidth/2,cy=sp3.clientHeight/2,sy=Math.sin(ay),cyy=Math.cos(ay),sx=Math.sin(ax),cxx=Math.cos(ax);
-pts.forEach(function(p,i){var x=p[0]*cyy+p[2]*sy,z=-p[0]*sy+p[2]*cyy,y=p[1]*cxx-z*sx;z=p[1]*sx+z*cxx;var s=.7+.5*(z+1)/2,e=els[i];e.style.transform="translate("+(cx+x*Rr)+"px,"+(cy+y*Rr)+"px) translate(-50%,-50%) scale("+s+")";e.style.opacity=.3+.7*(z+1)/2;e.style.zIndex=Math.round((z+1)*50)})}
-(function loop(){if(on){if(!dr){vx*=.95;vy+=(.006-vy)*.04}ax+=vx;ay+=vy;draw()}requestAnimationFrame(loop)})();
+// 3D skill sphere (real CSS 3D: rotating globe, labels always face you)
+var SK=["HTML5","CSS3","JavaScript","UI/UX","Responsive","Animations","Firebase","Cloudflare","Vercel","Netlify","GitHub","AI Tools","Deployment","Design"],sp3=$("#sph"),N=SK.length,g3=document.createElement("div"),pts=[],els=[],SR=0;
+g3.className="g3";sp3.appendChild(g3);
+function build(){SR=sp3.clientWidth*.38;g3.innerHTML="";els=[];pts=[];
+for(var i=0;i<3;i++){var m=document.createElement("div");m.className="rg";m.style.cssText="width:"+SR*2+"px;height:"+SR*2+"px;left:"+(-SR)+"px;top:"+(-SR)+"px;transform:rotateY("+i*60+"deg)";g3.appendChild(m)}
+[-.55,0,.55].forEach(function(l){var r=SR*Math.sqrt(1-l*l),m=document.createElement("div");m.className="rg";m.style.cssText="width:"+r*2+"px;height:"+r*2+"px;left:"+(-r)+"px;top:"+(-r)+"px;transform:translateY("+l*SR+"px) rotateX(90deg)";g3.appendChild(m)});
+SK.forEach(function(t,i){var ph=Math.acos(-1+2*(i+.5)/N),th=Math.sqrt(N*Math.PI)*ph,e=document.createElement("span");e.textContent=t;g3.appendChild(e);els.push(e);pts.push([Math.cos(th)*Math.sin(ph),Math.sin(th)*Math.sin(ph),Math.cos(ph)])})}
+build();addEventListener("resize",build);
+var ax=.3,ay=0,vx=0,vy=.006,dr=0,lx=0,ly=0,on=true;
+function draw(){g3.style.transform="rotateX("+ax+"rad) rotateY("+ay+"rad)";var sy=Math.sin(ay),cyy=Math.cos(ay),sx=Math.sin(ax),cxx=Math.cos(ax);
+pts.forEach(function(p,i){var z=-p[0]*sy+p[2]*cyy,e=els[i];z=p[1]*sx+z*cxx;e.style.transform="translate3d("+p[0]*SR+"px,"+p[1]*SR+"px,"+p[2]*SR+"px) translate(-50%,-50%) rotateY("+(-ay)+"rad) rotateX("+(-ax)+"rad)";e.style.opacity=.3+.7*(z+1)/2})}
+(function loop(){if(on){if(!dr){vx*=.95;vy+=(.006-vy)*.04;ax+=(.3-ax)*.02}ax=Math.max(-1.3,Math.min(1.3,ax+vx));ay+=vy;draw()}requestAnimationFrame(loop)})();
 new IntersectionObserver(function(es){on=es[0].isIntersecting}).observe(sp3);
 sp3.addEventListener("pointerdown",function(e){dr=1;lx=e.clientX;ly=e.clientY;sp3.setPointerCapture(e.pointerId)});
-sp3.addEventListener("pointermove",function(e){if(!dr)return;vy=(e.clientX-lx)*.004;vx=-(e.clientY-ly)*.004;ay+=vy;ax+=vx;lx=e.clientX;ly=e.clientY});
+sp3.addEventListener("pointermove",function(e){if(!dr)return;vy=(e.clientX-lx)*.004;vx=(e.clientY-ly)*.004;lx=e.clientX;ly=e.clientY});
 sp3.addEventListener("pointerup",function(){dr=0});sp3.addEventListener("pointercancel",function(){dr=0});
 // scroll handler
 var nv=$("#nv"),ls=$$("#nv a"),ss=$$("section[id]"),pr=$("#pr");
@@ -320,18 +366,11 @@ addEventListener("scroll",sc,{passive:true});sizeCv();sc();addEventListener("loa
 $("#mb").onclick=function(){nv.classList.toggle("o")};ls.forEach(function(a){a.onclick=function(){nv.classList.remove("o")}});
 function theme(){var r=document.documentElement,n=r.dataset.theme==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("th",n)}catch(e){}}$("#tg").onclick=theme;
 // sticky notes
-var NC=[["#f5e3a8","Portfolio today,<br>opportunities tomorrow ☺",-5,0,6],["#ffc9d6","Ideas →<br>Design → Build",4,150,0],["#c8ecd4","Coffee + code ☕",-3,10,120],["#cfe0ff","Say hello!<br>I reply fast 👋",6,160,112],["#ffe0b8","Drag me around!",-6,70,190]],nt=$("#notes"),zz=5;
-NC.forEach(function(n){var d=document.createElement("div");d.className="nt";d.style.cssText="background:"+n[0]+";left:"+n[3]+"px;top:"+n[4]+"px;transform:rotate("+n[2]+"deg)";d.innerHTML=n[1];nt.appendChild(d);var sx,sy,ox,oy,g=0;d.onpointerdown=function(e){g=1;sx=e.clientX;sy=e.clientY;ox=d.offsetLeft;oy=d.offsetTop;d.style.zIndex=++zz;d.setPointerCapture(e.pointerId)};d.onpointermove=function(e){if(g){d.style.left=(ox+e.clientX-sx)+"px";d.style.top=(oy+e.clientY-sy)+"px"}};d.onpointerup=function(){g=0}});
+var NC=[["#f5e3a8","Portfolio today,<br>opportunities tomorrow ☺",-5,0,6],["#ffc9d6","Ideas →<br>Design → Build",4,150,0],["#c8ecd4","Coffee + code ☕",-3,10,120],["#cfe0ff","Say hello!<br>I reply fast 👋",6,160,112],["#ffe0b8","Let’s build something great ✨",-6,70,190]],nt=$("#notes"),zz=5;
+NC.forEach(function(n){var d=document.createElement("div");d.className="nt";d.style.cssText="background:"+n[0]+";left:"+n[3]+"px;top:"+n[4]+"px;transform:rotate("+n[2]+"deg)";d.innerHTML=n[1];nt.appendChild(d)});
 // contact form
 $("#f").onsubmit=function(e){e.preventDefault();var f=e.target,st=$("#st"),b=new URLSearchParams(new FormData(f)).toString();st.textContent="Sending…";
 fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:b}).then(function(r){if(!r.ok)throw 0;st.textContent="Thank you! Your message was sent.";f.reset()}).catch(function(){st.textContent="Opening your mail app instead…";location.href="mailto:zenix.pallab@gmail.com?subject="+encodeURIComponent("Portfolio message from "+$("#n").value)+"&body="+encodeURIComponent($("#m").value+"\n\n"+$("#n").value+" ("+$("#e").value+")")})};
-// command palette
-var CI=[["01  About","#about"],["02  Services","#services"],["03  Skills","#skills"],["04  Projects","#work"],["05  Journey","#awards"],["06  Contact","#contact"],["Toggle light / dark theme","t"],["Open GitHub","https://github.com/zenix-pallab"],["Email Pallab","mailto:zenix.pallab@gmail.com"]],cp=$("#cp"),cin=$("#ci"),cl=$("#cl");
-function rl(q){cl.innerHTML="";CI.filter(function(i){return i[0].toLowerCase().indexOf(q.toLowerCase())>-1}).forEach(function(i,k){var li=document.createElement("li");li.className=k?"":"f";li.innerHTML=i[0]+"<small>"+(i[1].charAt(0)=="#"?"GO":i[1]=="t"?"TOGGLE":"OPEN")+"</small>";li.onclick=function(){go(i[1])};cl.appendChild(li)})}
-function go(t){cp.classList.remove("o");if(t=="t")theme();else if(t.charAt(0)=="#")location.hash=t;else window.open(t,"_blank")}
-function op(){cp.classList.add("o");cin.value="";rl("");cin.focus()}
-$("#kb").onclick=op;cp.onclick=function(e){if(e.target==cp)cp.classList.remove("o")};cin.oninput=function(){rl(cin.value)};cin.onkeydown=function(e){if(e.key=="Enter"){var f=cl.querySelector("li");if(f)f.click()}};
-addEventListener("keydown",function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()=="k"){e.preventDefault();op()}else if(e.key=="Escape")cp.classList.remove("o")});
 </script>
 </body>
 </html>
