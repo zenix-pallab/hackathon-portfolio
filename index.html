@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pallab Ghosh — Web Developer &amp; UI Designer</title>
 <meta name="description" content="Portfolio of Pallab Ghosh: web developer and UI designer.">
-<script>try{document.documentElement.dataset.theme=localStorage.getItem("th")||"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("th")||"dark"}catch(e){document.documentElement.dataset.theme="dark"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 <style>
@@ -86,8 +86,8 @@ body:not(.ld) .hx h1 i{animation-play-state:running}
 .cvw{height:300vh;padding:0}
 .cvs{position:sticky;top:0;height:100svh;overflow:hidden;perspective:1100px;padding-top:64px;display:flex;align-items:center}
 .cvh{position:absolute;left:5vw;top:92px;z-index:3}.cvh h2{margin:4px 0 0;font-size:clamp(2.4rem,8vw,5.4rem)}
-.tr{display:flex;gap:4vw;padding:60px 14vw 0;will-change:transform;transform-style:preserve-3d}
-.cd{flex:0 0 min(78vw,440px);transform-style:preserve-3d}
+.tr{display:flex;gap:4vw;padding:60px 14vw 0;will-change:transform}
+.cd{flex:0 0 min(78vw,440px)}
 .ci{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--sh);will-change:transform}
 .vs{height:min(30vh,240px);display:grid;place-items:center;font:2.3rem "Archivo Black";letter-spacing:.05em;color:#fff3d6;position:relative;overflow:hidden}
 .v1{background:radial-gradient(circle at 30% 30%,#d02a47,#3d0813 75%)}.v2{background:radial-gradient(circle at 70% 30%,#e8b02e,#6b3f04 80%)}.v3{background:radial-gradient(circle at 50% 30%,#2a2a35,#050507 80%)}.v4{background:repeating-linear-gradient(45deg,var(--bg2),var(--bg2) 12px,var(--card) 12px,var(--card) 24px);color:var(--gold)}
@@ -144,6 +144,13 @@ input,textarea{width:100%;padding:14px 16px;border-radius:14px;border:1px solid 
 .nt::before{content:"";position:absolute;top:-7px;left:50%;width:13px;height:13px;border-radius:50%;background:var(--wine);box-shadow:0 2px 3px rgba(0,0,0,.3)}
 footer{text-align:center;padding:30px 20px 40px;font-size:.82rem;color:var(--mute);background:var(--bg);border-top:1px solid var(--line)}
 @media(max-width:700px){.sil{width:58vw;bottom:-6%}.hx{padding-bottom:6vh}}
+
+section.hero{background:radial-gradient(ellipse 70% 55% at 50% 0%,color-mix(in srgb,var(--gold2) 13%,transparent),transparent 70%),var(--bg)}
+.kk{margin:0 0 18px}
+.ib.th{width:36px;height:36px;min-width:36px;padding:0}.ib.th svg{width:22px;height:22px}
+.sph::before{display:block;content:"";position:absolute;left:50%;top:50%;width:calc(var(--sr,150px)*2);height:calc(var(--sr,150px)*2);margin:calc(var(--sr,150px)*-1) 0 0 calc(var(--sr,150px)*-1);border-radius:50%;background:radial-gradient(circle at 34% 28%,color-mix(in srgb,var(--gold) 30%,transparent),transparent 60%);box-shadow:inset -22px -26px 60px rgba(0,0,0,.5),0 0 70px color-mix(in srgb,var(--gold) 16%,transparent);pointer-events:none}
+.sph span{backface-visibility:hidden;-webkit-backface-visibility:hidden;font-size:.95rem}
+.lnk{position:relative;z-index:10;display:inline-block;padding:8px 0;cursor:pointer}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hx h1 i{transform:none}}
 
 body{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}input,textarea{user-select:text;-webkit-user-select:text}
@@ -159,7 +166,7 @@ textarea{resize:none}
 @keyframes rot{to{transform:rotate(360deg)}}
 .kk{font:700 .78rem Inter;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);display:flex;gap:14px;align-items:center;margin:16px 0 14px}.kk::before,.kk::after{content:"";width:34px;height:1px;background:var(--gold)}
 .sub2{font:600 clamp(.9rem,2.6vw,1.4rem) Inter;letter-spacing:.22em;text-transform:uppercase;margin-top:20px}
-.th{width:42px;height:42px;padding:0}.th svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.th .sun{display:none}[data-theme="dark"] .th .sun{display:block}[data-theme="dark"] .th .moon{display:none}
+.th{width:36px;height:36px;min-width:36px;padding:0}.th svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.th .sun{display:none}[data-theme="dark"] .th .sun{display:block}[data-theme="dark"] .th .moon{display:none}
 .swl{min-height:100svh;height:auto;display:grid;place-items:center;padding:110px 0 100px}
 .fr{position:relative;left:auto;top:auto;transform:none;aspect-ratio:auto;width:min(1040px,90vw);z-index:2;padding:clamp(26px,6vw,64px);color:#f6ecd8}
 .bm{opacity:.4}
@@ -185,6 +192,7 @@ textarea{resize:none}
 .st:nth-child(odd).rv{transform:translateX(90px) scale(.9) rotate(2deg)}
 .st.rv.in{opacity:1;transform:none}
 .st.in::before{animation:pop .8s .25s both cubic-bezier(.2,1.6,.4,1)}@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.gl{font-size:clamp(4rem,15vw,12rem)}
 </style>
 </head>
 <body class="ld">
@@ -206,9 +214,9 @@ textarea{resize:none}
 
 <main>
 <section class="hero lt" id="top">
-  <div class="orb o1"></div><div class="orb o2"></div>
+  
   <div class="hx">
-    <div class="bd"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cp1" d="M60 60m-48 0a48 48 0 1 1 96 0a48 48 0 1 1-96 0"/></defs><text><textPath href="#cp1">Portfolio • Design • Hackathon 2026 •</textPath></text></svg><b>PG</b></div>
+    
     <span class="kk">Explore my portfolio</span>
     <h1><span><i>Pallab</i></span><span><i>Ghosh</i></span></h1>
     <div class="sub2">Web developer &amp; UI designer</div>
@@ -295,7 +303,7 @@ textarea{resize:none}
     <a class="pill" href="https://x.com/zenix_pallab" target="_blank" rel="noopener"><svg class="ic"><use href="#xx"/></svg>X</a>
     <a class="pill" href="https://www.facebook.com/share/18Mc2tV4Ag/" target="_blank" rel="noopener"><svg class="ic"><use href="#fb"/></svg>Facebook</a>
     <a class="pill" href="https://linktr.ee/zenix_pallab" target="_blank" rel="noopener"><svg class="ic"><use href="#lt"/></svg>Linktree</a>
-    <a class="pill" href="mailto:zenix.pallab@gmail.com"><svg class="ic"><use href="#ml"/></svg>Email</a>
+    <a class="pill" href="mailto:gpallab726@gmail.com"><svg class="ic"><use href="#ml"/></svg>Email</a>
   </div>
   <div class="cg">
     <form id="f" class="rv" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -318,7 +326,7 @@ setTimeout(ldo,2600);
 var R=["websites.","interfaces.","products.","experiences."],ri=0,ci=0,dl=0,re=$("#rl");
 (function t(){var w="I design, build & deploy "+R[ri];var b=25;re.textContent=w.slice(0,b+ci);if(!dl&&ci<R[ri].length){ci++;setTimeout(t,90)}else if(!dl){dl=1;setTimeout(t,1600)}else if(ci>0){ci--;setTimeout(t,45)}else{dl=0;ri=(ri+1)%R.length;setTimeout(t,250)}})();
 // reveal + counters
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});$$(".rv,.bars").forEach(function(el){io.observe(el)});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io2.unobserve(e.target)}})},{rootMargin:"0px 0px -32% 0px",threshold:.1});$$(".rv,.bars").forEach(function(el){(el.classList.contains("st")?io2:io).observe(el)});
 $$("[data-n]").forEach(function(el){if(el.classList.contains("st"))return;var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){o.disconnect();var t=+el.dataset.n,s=null;(function f(ts){s=s||ts;var p=Math.min((ts-s)/1400,1);el.textContent=Math.round(t*p);if(p<1)requestAnimationFrame(f)})(0)}});o.observe(el)});
 // LET'S TALK letters
 (function(){var s=$("#say"),h="";"Let’s".split("").forEach(function(c){h+="<span>"+c+"</span>"});h+="<br>";"talk".split("").forEach(function(c){h+="<span>"+c+"</span>"});s.innerHTML=h})();
@@ -337,21 +345,21 @@ var gl=$$(".gl");
 var cvw=$("#work"),tr=$("#tr"),cds=$$(".cd");
 function sizeCv(){cvw.style.height=(innerHeight+Math.max(0,tr.scrollWidth-innerWidth))+"px"}
 function cv(){var p=clamp((scrollY-cvw.offsetTop)/Math.max(1,cvw.offsetHeight-innerHeight),0,1);$("#cpg").style.width=(p*100)+"%";$("#h2t").style.opacity=p>.9||p<0?0:1;tr.style.transform="translate3d("+(-p*Math.max(0,tr.scrollWidth-innerWidth))+"px,0,0)";
-cds.forEach(function(c){var r=c.getBoundingClientRect(),d=((r.left+r.width/2)-innerWidth/2)/(innerWidth/2),ad=Math.abs(d),ci2=c.firstChild;ci2.style.transform="rotateY("+(-d*34)+"deg) translateZ("+(-ad*130)+"px) scale("+(1-ad*.07)+")";ci2.style.opacity=clamp(1-ad*.35,.35,1)})}
+cds.forEach(function(c){var r=c.getBoundingClientRect(),d=((r.left+r.width/2)-innerWidth/2)/(innerWidth/2),ad=Math.abs(d),ci2=c.firstChild;ci2.style.transform="perspective(1100px) rotateY("+(-d*34)+"deg) translateZ("+(-ad*130)+"px) scale("+(1-ad*.07)+")";ci2.style.opacity=clamp(1-ad*.35,.35,1)})}
 addEventListener("resize",function(){sizeCv();cv()});
 // accordion
 $$(".ro").forEach(function(r){var b=r.querySelector("button"),p=r.querySelector("div");function fix(){p.style.maxHeight=r.classList.contains("o")?p.scrollHeight+30+"px":0}fix();b.onclick=function(){$$(".ro").forEach(function(x){if(x!==r){x.classList.remove("o");x.querySelector("div").style.maxHeight=0}});r.classList.toggle("o");fix()}});
 // 3D skill sphere (real CSS 3D: rotating globe, labels always face you)
 var SK=["HTML5","CSS3","JavaScript","UI/UX","Responsive","Animations","Firebase","Cloudflare","Vercel","Netlify","GitHub","AI Tools","Deployment","Design"],sp3=$("#sph"),N=SK.length,g3=document.createElement("div"),pts=[],els=[],SR=0;
 g3.className="g3";sp3.appendChild(g3);
-function build(){SR=sp3.clientWidth*.38;g3.innerHTML="";els=[];pts=[];
+function build(){SR=sp3.clientWidth*.38;sp3.style.setProperty("--sr",SR+"px");g3.innerHTML="";els=[];pts=[];
 for(var i=0;i<3;i++){var m=document.createElement("div");m.className="rg";m.style.cssText="width:"+SR*2+"px;height:"+SR*2+"px;left:"+(-SR)+"px;top:"+(-SR)+"px;transform:rotateY("+i*60+"deg)";g3.appendChild(m)}
 [-.55,0,.55].forEach(function(l){var r=SR*Math.sqrt(1-l*l),m=document.createElement("div");m.className="rg";m.style.cssText="width:"+r*2+"px;height:"+r*2+"px;left:"+(-r)+"px;top:"+(-r)+"px;transform:translateY("+l*SR+"px) rotateX(90deg)";g3.appendChild(m)});
-SK.forEach(function(t,i){var ph=Math.acos(-1+2*(i+.5)/N),th=Math.sqrt(N*Math.PI)*ph,e=document.createElement("span");e.textContent=t;g3.appendChild(e);els.push(e);pts.push([Math.cos(th)*Math.sin(ph),Math.sin(th)*Math.sin(ph),Math.cos(ph)])})}
+SK.forEach(function(t,i){var ph=Math.acos(-1+2*(i+.5)/N),th=Math.sqrt(N*Math.PI)*ph,e=document.createElement("span");e.textContent=t;g3.appendChild(e);els.push(e);var v=[Math.cos(th)*Math.sin(ph),Math.sin(th)*Math.sin(ph),Math.cos(ph)];pts.push(v);var yaw=Math.atan2(v[0],v[2])*180/Math.PI,pit=-Math.asin(v[1])*180/Math.PI;e.style.transform="rotateY("+yaw+"deg) rotateX("+pit+"deg) translateZ("+SR+"px) translate(-50%,-50%)"})}
 build();addEventListener("resize",build);
 var ax=.3,ay=0,vx=0,vy=.006,dr=0,lx=0,ly=0,on=true;
 function draw(){g3.style.transform="rotateX("+ax+"rad) rotateY("+ay+"rad)";var sy=Math.sin(ay),cyy=Math.cos(ay),sx=Math.sin(ax),cxx=Math.cos(ax);
-pts.forEach(function(p,i){var z=-p[0]*sy+p[2]*cyy,e=els[i];z=p[1]*sx+z*cxx;e.style.transform="translate3d("+p[0]*SR+"px,"+p[1]*SR+"px,"+p[2]*SR+"px) translate(-50%,-50%) rotateY("+(-ay)+"rad) rotateX("+(-ax)+"rad)";e.style.opacity=.3+.7*(z+1)/2})}
+pts.forEach(function(p,i){var z=-p[0]*sy+p[2]*cyy,e=els[i];z=p[1]*sx+z*cxx;e.style.opacity=.25+.75*Math.pow((z+1)/2,.8)})}
 (function loop(){if(on){if(!dr){vx*=.95;vy+=(.006-vy)*.04;ax+=(.3-ax)*.02}ax=Math.max(-1.3,Math.min(1.3,ax+vx));ay+=vy;draw()}requestAnimationFrame(loop)})();
 new IntersectionObserver(function(es){on=es[0].isIntersecting}).observe(sp3);
 sp3.addEventListener("pointerdown",function(e){dr=1;lx=e.clientX;ly=e.clientY;sp3.setPointerCapture(e.pointerId)});
@@ -361,7 +369,7 @@ sp3.addEventListener("pointerup",function(){dr=0});sp3.addEventListener("pointer
 var nv=$("#nv"),ls=$$("#nv a"),ss=$$("section[id]"),pr=$("#pr");
 function sc(){var d=document.documentElement;$("#pg").style.width=(scrollY/(d.scrollHeight-innerHeight)*100)+"%";var c="";ss.forEach(function(s){if(scrollY+200>=s.offsetTop)c=s.id});ls.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+c)});
 var b=pr.getBoundingClientRect();pr.style.setProperty("--p",clamp((innerHeight*.65-b.top)/b.height,0,1));
-gl.forEach(function(g){var r=g.getBoundingClientRect(),q=(r.top-innerHeight/2)/innerHeight;g.style.transform="translateX("+(g.dataset.d*q*-260-(g.dataset.d<0?0:0))+"px)"});cv()}
+var gr=$(".gh").getBoundingClientRect(),gp=clamp((innerHeight-gr.top)/(innerHeight+gr.height),0,1);var gh=$(".gh").getBoundingClientRect(),gp=clamp((innerHeight*.9-gh.top)/(innerHeight*.55+gh.height),0,1);gl.forEach(function(g){var tot=Math.max(0,g.scrollWidth-innerWidth);g.style.transform="translateX("+(g.dataset.d>0?-gp*tot:-(1-gp)*tot)+"px)"});cv()}
 addEventListener("scroll",sc,{passive:true});sizeCv();sc();addEventListener("load",function(){sizeCv();sc()});
 $("#mb").onclick=function(){nv.classList.toggle("o")};ls.forEach(function(a){a.onclick=function(){nv.classList.remove("o")}});
 function theme(){var r=document.documentElement,n=r.dataset.theme==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("th",n)}catch(e){}}$("#tg").onclick=theme;
@@ -370,7 +378,10 @@ var NC=[["#f5e3a8","Portfolio today,<br>opportunities tomorrow ☺",-5,0,6],["#f
 NC.forEach(function(n){var d=document.createElement("div");d.className="nt";d.style.cssText="background:"+n[0]+";left:"+n[3]+"px;top:"+n[4]+"px;transform:rotate("+n[2]+"deg)";d.innerHTML=n[1];nt.appendChild(d)});
 // contact form
 $("#f").onsubmit=function(e){e.preventDefault();var f=e.target,st=$("#st"),b=new URLSearchParams(new FormData(f)).toString();st.textContent="Sending…";
-fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:b}).then(function(r){if(!r.ok)throw 0;st.textContent="Thank you! Your message was sent.";f.reset()}).catch(function(){st.textContent="Opening your mail app instead…";location.href="mailto:zenix.pallab@gmail.com?subject="+encodeURIComponent("Portfolio message from "+$("#n").value)+"&body="+encodeURIComponent($("#m").value+"\n\n"+$("#n").value+" ("+$("#e").value+")")})};
+fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:b}).then(function(r){if(!r.ok)throw 0;st.textContent="Thank you! Your message was sent.";f.reset()}).catch(function(){st.textContent="Opening your mail app instead…";location.href="mailto:gpallab726@gmail.com?subject="+encodeURIComponent("Portfolio message from "+$("#n").value)+"&body="+encodeURIComponent($("#m").value+"\n\n"+$("#n").value+" ("+$("#e").value+")")})};
+// project cards: whole card opens its link (works with the 3D transforms and in-app previews)
+function openLink(h){if(h.charAt(0)==="#"){var t=document.querySelector(h);if(t)t.scrollIntoView({behavior:"smooth"});return}var w=null;try{w=window.open(h,"_blank","noopener")}catch(e){}if(!w)location.href=h}
+$$(".ci").forEach(function(ci){var a=ci.querySelector(".lnk");if(!a)return;var h=a.getAttribute("href");ci.style.cursor="pointer";ci.addEventListener("click",function(e){e.preventDefault();openLink(h)})});
 </script>
 </body>
 </html>
